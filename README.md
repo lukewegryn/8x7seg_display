@@ -38,6 +38,9 @@ An Arduino Uno is used to write the letters to the LEDs.
 
 ![F5461AH](f5461ah.jpg)
 
+## Board
+
+![Board](board.jpg)
 ## Wiring
 
 ### 4 Digit 7 Segment Displays
