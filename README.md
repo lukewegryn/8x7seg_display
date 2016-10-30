@@ -1,6 +1,33 @@
 # 8x7seg_display
 Code to write letters to an arduino board
 
+# General Information
+
+The Display (DS\#) pins are active LOW, and the Segment Pins (a,b,c,d,e,f,g) are active HIGH.
+
+The characters can be written to the segments using the Arduino PORTD and writing out binary. Keep in mind the most significant bit of PORTD is Digital Pin 6 of the Arduino so it needs to be kept HIGH (disabled) when writing to the displays.
+
+Lighting the digits works by alternating between each digit and lighting it up very quickly with the correct segments selected and then turning it off. When each digit is lit up in succession it gives the effect of them of each digit being lit up constantly.
+
+Here is the flow:
+
+1. Disable all of the Digits
+2. Write the correct segment (bits) to Arduino PORTD
+3. Enable the Display
+4. Delay for 2ms
+5. Disable the Display
+6. Repeat 1-5 with the next display
+
+## PORTD
+
+The segments are aligned with PORTD as follows.
+
+| Segment| g | f | e | d | c | b | a |
+|:------:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|        | b6| b5| b4| b3| b2| b1| b0|
+
+*b7 is the digit select for DS4 (1)
+
 # Setup
 
 This project uses 2 4 digit (7 segment) LEDs. The 4 digit displays are model F5461AH.
