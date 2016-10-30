@@ -48,3 +48,9 @@ Use the following mapping (remember that the segment select pins for each displa
 |  DS2 (2)           | Digital 13  |
 
 *The last digit has been left out because it would have been an anolog pin and would have made writing letters more difficult
+
+## Code
+
+Once everything is wired up, use the [Arduino code](halloween.ino) file, open it in the Arduino IDE, verify it, and upload it to the board.
+
+"Happy Hallos Eve" should be displayed! 
