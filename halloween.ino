@@ -1,11 +1,3 @@
-int a=0, 
-    b=1, 
-    c=2, 
-    d=3, 
-    e=4, 
-    f=5, 
-    g=6;
-    
 int d1=7,d2=8,d3=9,d4=10,d5=11,d6=12,d7=13;
    
 #define E_D LOW //Enable Digit
@@ -20,9 +12,7 @@ void setup() {
   DDRB=0xff; // all pins 8-13 OUTPUTs even though we only use pins 8-12
   
   PORTD=B10000000; // make pins 0-6 LOWs, and pin 7 HIGH (Disabled)
-  PORTB=B00111111; // make pins 8-13 HIGH (Disabled)
-  //pinMode(d8, OUTPUT);
-  //digitalWrite(d8, D_D); 
+  PORTB=B00111111; // make pins 8-13 HIGH (Disabled) 
 }
 
 int message = 0;
@@ -60,15 +50,6 @@ void loop() {
     writeLetter('E', d5);
     writeLetter('-', d6);
   }
-  /*PORTD=B11110110;
-  digitalWrite(d1, E_D);
-  delay(2);
-  digitalWrite(d1, D_D);
-  PORTD=B11110111;
-  digitalWrite(d2, E_D);
-  delay(2);
-  digitalWrite(d2, D_D);*/
-  
 }
 
 void writeLetter(char letter, int digit){
