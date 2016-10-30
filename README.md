@@ -45,3 +45,6 @@ Use the following mapping (remember that the segment select pins for each displa
 |  DS1 (1)           | Digital 10  |
 |  DS4 (2)           | Digital 11  |
 |  DS3 (2)           | Digital 12  |     
+|  DS2 (2)           | Digital 13  |
+
+*The last digit has been left out because it would have been an anolog pin and would have made writing letters more difficult
